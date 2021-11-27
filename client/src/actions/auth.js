@@ -8,6 +8,8 @@ import {
   USER_LOADED,
   LOGIN_FAIL,
   LOGIN_SUCCESS,
+  LOGOUT,
+  CLEAR_PROFILE,
 } from './types';
 
 import store from '../store';
@@ -23,7 +25,6 @@ export const loadUser = () => async (dispatch) => {
       payload: res.data,
     });
   } catch (err) {
-    console.log('entering in catch block-loadUser()');
     dispatch({
       type: AUTH_ERROR,
     });
@@ -73,7 +74,6 @@ export const login = (email, password) => async (dispatch) => {
 
   try {
     const res = await axios.post('/api/auth', body, config);
-
     dispatch({
       type: LOGIN_SUCCESS,
       payload: res.data,
@@ -91,4 +91,10 @@ export const login = (email, password) => async (dispatch) => {
       type: LOGIN_FAIL,
     });
   }
+};
+
+//Logout User
+export const logout = () => (dispatch) => {
+  dispatch({ type: CLEAR_PROFILE });
+  dispatch({ type: LOGOUT });
 };
