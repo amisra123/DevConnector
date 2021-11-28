@@ -33,7 +33,6 @@ const Dashboard = ({
       )}
     </Fragment>
   );
-  //return <div>Dashboard</div>;
 };
 
 Dashboard.propTypes = {
