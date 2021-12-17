@@ -12,7 +12,6 @@ import {
   CLEAR_PROFILE,
 } from './types';
 
-import store from '../store';
 //Load User
 export const loadUser = () => async (dispatch) => {
   if (localStorage.token) {
