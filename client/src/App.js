@@ -13,6 +13,7 @@ import AddEducation from './components/profile-forms/AddEducation';
 import Profiles from './components/profiles/Profiles';
 import { loadUser } from './actions/auth';
 import setAuthToken from './utils/setAuthToken';
+import Profile from './components/profile/Profile';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 //redux
 import { Provider } from 'react-redux';
@@ -39,6 +40,7 @@ const App = () => {
               <Route exact path='/register' component={Register} />
               <Route exact path='/login' component={Login} />
               <Route exact path='/profiles' component={Profiles} />
+              <Route exact path='/profile/:id' component={Profile} />
               <PrivateRoute exact path='/dashboard' component={Dashboard} />
               <PrivateRoute
                 exact
