@@ -8,6 +8,7 @@ import ProfileTop from './ProfileTop';
 import ProfileAbout from './ProfileAbout';
 import ProfileExperience from './ProfileExperience';
 import ProfileEducation from './ProfileEducation';
+import ProfileGithub from './ProfileGithub';
 
 const Profile = ({
   match,
@@ -49,7 +50,7 @@ const Profile = ({
                   ))}
                 </Fragment>
               ) : (
-                <h4>No experience currently</h4>
+                <h4>No experience credentials</h4>
               )}
             </div>
             <div className='profile-edu bg-white p-2'>
@@ -64,9 +65,12 @@ const Profile = ({
                   ))}
                 </Fragment>
               ) : (
-                <h4>No experience currently</h4>
+                <h4>No education credentials</h4>
               )}
             </div>
+            {profile.githubusername && (
+              <ProfileGithub username={profile.githubusername} />
+            )}
           </div>
         </Fragment>
       )}
