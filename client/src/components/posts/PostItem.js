@@ -49,7 +49,7 @@ const PostItem = ({
                 <span class='comment-count'>{comments.length}</span>
               )}
             </Link>
-            {!auth.loading && user == auth.user._id && (
+            {!auth.loading && user === auth.user._id && (
               <button
                 onClick={(e) => deletePost(_id)}
                 type='button'

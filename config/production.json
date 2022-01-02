@@ -1,0 +1,6 @@
+{
+  "mongoURI": "mongodb+srv://admin-aish:andromeda123@devconnector.oktek.mongodb.net/user?retryWrites=true&w=majority",
+  "jwtSecret": "mysecrettoken",
+  "githubClientId": "d1ab77b6d8f7ef06aae0",
+  "githubSecret": "96d8231a472b801ecbb4fbd0b7f9a14b54d89c7d"
+}
